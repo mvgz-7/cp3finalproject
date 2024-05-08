@@ -20,25 +20,39 @@
         <!-- Side Bar-->
         <div class="tab-bar" id="tabBar">
             <div class="category">MAIN CATEGORY</div>
-            <a href="index.html"><div class="tab">Dashboard</div></a>
+            <a href="index.html"><div class="tab"><img src="dashboard.png">Dashboard</div></a>
             <div class="category">APPEARANCE</div>
+            <a href="index.html"><div class="tab"><img src="classes.png">Student Classes</div></a>
+            <a href="index.html"><div class="tab"><img src="subjects.png">Subjects</div></a>
+            <a href="index.html"><div class="tab"><img src="students.png">Students</div></a>
+            <a href="index.html"><div class="tab"><img src="result.png">Result</div></a>
         </div>
         <!-- Main Content-->
+        <div class="header">
+            <h1>Dashboard</h1>            
+        </div>
         <div class="content">
-            <h1>Dashboard</h1>
-          </div>
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+        </div>
+        
 
         <!-- JavaScript to toggle tab bar -->
         <script>
         function toggleSideMenu() {
             const tabBar = document.getElementById('tabBar');
             const content = document.querySelector('.content');
+            const header = document.querySelector('.header');
             if (tabBar.style.left === '-300px') {
                 tabBar.style.left = '0';
                 content.style.marginLeft = '250px';
+                header.style.marginLeft = '250px';
             } else {
                 tabBar.style.left = '-300px';
-                content.style.marginLeft = '20px';
+                content.style.marginLeft = '0';
+                header.style.marginLeft = '0';
             }
         }
   </script>

@@ -117,16 +117,24 @@ h5 {
 }
 
 .tab {
-    padding: 10px;
+    padding: 10px 1px;
     transition: background-color 1.0s ease;
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .tab:hover {
     background-color: #282828;
     display: block;
     box-sizing: border-box;
+}
+
+.tab img {
+    width: 17px;
+    height: 17px;
+    margin-right: 15px;
+    margin-top: 7px;
 }
 
 .category {
@@ -136,10 +144,10 @@ h5 {
 }
 
 /* Style the content area */
-.content {
-    margin-left: 20px; /* Add space for the tab bar when visible */
+.content, .header {
     padding: 20px 100px;
-    color: #1E1E1E;
+    color: #464545;
+    z-index: 1000;
 }
 
 /* Responsive styles */
@@ -154,4 +162,10 @@ h5 {
 
 a {
     text-decoration: none;
+}
+
+.header {
+    background-color: #FFF8EF;
+    display: flex;
+    margin: 0;
 }
