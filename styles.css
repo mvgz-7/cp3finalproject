@@ -11,7 +11,7 @@ body {
 
 .title {
     color: #FFFFFF;
-    padding: 10px 20px;
+    padding: 10px 2px;
     font-weight: bold;
 }
 
@@ -91,4 +91,10 @@ h5 {
 .a-container:hover {
     text-decoration: underline;
     text-decoration-color: #2F6FCF;
+}
+
+.tab img {
+    width: 20px;
+    padding: 10px 20px;
+    margin-top: 2px;
 }
