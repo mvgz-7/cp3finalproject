@@ -20,7 +20,7 @@
         <!-- Side Bar-->
         <div class="tab-bar" id="tabBar">
             <div class="category">MAIN CATEGORY</div>
-            <a href="#"><div class="tab">Dashboard</div></a>
+            <a href="index.html"><div class="tab">Dashboard</div></a>
             <div class="category">APPEARANCE</div>
         </div>
         <!-- Main Content-->
@@ -33,11 +33,11 @@
         function toggleSideMenu() {
             const tabBar = document.getElementById('tabBar');
             const content = document.querySelector('.content');
-            if (tabBar.style.left === '-200px') {
+            if (tabBar.style.left === '-300px') {
                 tabBar.style.left = '0';
-                content.style.marginLeft = '220px';
+                content.style.marginLeft = '250px';
             } else {
-                tabBar.style.left = '-200px';
+                tabBar.style.left = '-300px';
                 content.style.marginLeft = '20px';
             }
         }

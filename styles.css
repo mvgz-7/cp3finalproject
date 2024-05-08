@@ -137,7 +137,7 @@ h5 {
 
 /* Style the content area */
 .content {
-    margin-left: 220px; /* Add space for the tab bar when visible */
+    margin-left: 20px; /* Add space for the tab bar when visible */
     padding: 20px 100px;
     color: #1E1E1E;
 }
