@@ -1,0 +1,16 @@
+body {
+    background-color: #FFF2E1;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.tab-bar {
+    background-color: #803D3B;
+    display: flex;
+}
+
+.title {
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-weight: bold;
+}
