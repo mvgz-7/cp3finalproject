@@ -116,19 +116,20 @@ h5 {
     transition: left 0.3s ease;
 }
 
-.tab {
+.tab-name {
     padding: 10px 1px;
     transition: background-color 1.0s ease;
     color: white;
     text-decoration: none;
     font-size: 18px;
+    position: relative;
 }
 
-.tab:hover {
+.tab-name:hover {
     background-color: #282828;
     display: block;
     box-sizing: border-box;
-}
+}   
 
 .icons {
     width: 17px;
@@ -178,15 +179,16 @@ a {
     position: relative;
 }
 
-.arrow {
-    display: inline-block;
-    padding-left: 65px;
-    width: 12px;
-    height: 12px;
-    transition: opacity 1.0s ease;
+.subtags {
+    display: none; /* Initially hidden */
+    margin-left: 20px; /* Adjust spacing */
+    color: white;
+
 }
 
-.fade-in {
-    opacity: 1;
-}
+  /* Show subtags when their parent tab is expanded */
+  .tab.expanded .subtags {
+    display: flex;
+    flex-direction: column;
+  }
 
