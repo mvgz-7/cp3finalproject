@@ -22,7 +22,7 @@
             <div class="category">MAIN CATEGORY</div>
             <a href="index.html"><div class="tab"><img src="dashboard.png" class="icons">Dashboard</div></a>
             <div class="category">APPEARANCE</div>
-            <a href="#"><div class="tab" onclick="toggleArrow()"><img src="classes.png" class="icons">Student Classes<img src="arrow.png" class="arrow" id="arrowIcon"></div></a>
+            <a href="#"><div class="tab" onclick="changeImage()"><img src="classes.png" class="icons">Student Classes<img src="arrow.png" class="arrow fade-in" id="mainImage"></div></a>
             <a href="#"><div class="tab"><img src="subjects.png" class="icons">Subjects</div></a>
             <a href="#"><div class="tab"><img src="students.png" class="icons">Students</div></a>
             <a href="#"><div class="tab"><img src="result.png" class="icons">Result</div></a>
@@ -43,25 +43,40 @@
 
         <!-- JavaScript to toggle tab bar -->
         <script>
-        function toggleSideMenu() {
-            const tabBar = document.getElementById('tabBar');
-            const content = document.querySelector('.content');
-            const header = document.querySelector('.header');
-            if (tabBar.style.left === '-300px') {
-                tabBar.style.left = '0';
-                content.style.marginLeft = '250px';
-                header.style.marginLeft = '250px';
-            } else {
-                tabBar.style.left = '-300px';
-                content.style.marginLeft = '0';
-                header.style.marginLeft = '0';
+            function toggleSideMenu() {
+                const tabBar = document.getElementById('tabBar');
+                const content = document.querySelector('.content');
+                const header = document.querySelector('.header');
+                if (tabBar.style.left === '-300px') {
+                    tabBar.style.left = '0';
+                    content.style.marginLeft = '250px';
+                    header.style.marginLeft = '250px';
+                } else {
+                    tabBar.style.left = '-300px';
+                    content.style.marginLeft = '0';
+                    header.style.marginLeft = '0';
+                }
             }
-        }
-        
-        function toggleArrow() {
-            const arrowIcon = document.getElementById('arrowIcon');
-            arrowIcon.classList.toggle('down'); // Toggle the 'down' class to rotate the arrow
-        }
-  </script>
+            
+            function changeImage() {
+                const mainImage = document.getElementById('mainImage');
+                const currentSrc = mainImage.src; // Get the current image source
+
+                // Check the current image source and toggle to the other image
+                if (currentSrc.includes('arrow.png')) {
+                    mainImage.classList.remove('fade-in'); // Remove fade-in class for smooth transition
+                    setTimeout(() => {
+                    mainImage.src = 'arrow2.png'; // Change to Image 2
+                    mainImage.classList.add('fade-in'); // Add fade-in class to show the new image smoothly
+                    }, 300); // Delay to allow the fade-out effect before changing the image
+                } else {
+                    mainImage.classList.remove('fade-in'); // Remove fade-in class for smooth transition
+                    setTimeout(() => {
+                    mainImage.src = 'arrow.png'; // Change back to Image 1
+                    mainImage.classList.add('fade-in'); // Add fade-in class to show the new image smoothly
+                    }, 300); // Delay to allow the fade-out effect before changing the image
+                }
+            }
+        </script>
     </body>
 </html>

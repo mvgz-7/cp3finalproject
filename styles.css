@@ -175,6 +175,7 @@ a {
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
+    position: relative;
 }
 
 .arrow {
@@ -182,10 +183,10 @@ a {
     padding-left: 65px;
     width: 12px;
     height: 12px;
-    transition: transform 0.3s ease;
+    transition: opacity 1.0s ease;
 }
 
-.down {
-    transform: rotate(90deg);
+.fade-in {
+    opacity: 1;
 }
 
