@@ -363,3 +363,17 @@ td {
 .submit:hover {
     background-color: #2A5D2B;
 }
+
+.log-out {
+    color:white;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.logout-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 67.3rem;
+}
