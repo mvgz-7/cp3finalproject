@@ -48,14 +48,24 @@
 
         <!-- Main Content-->
         <div class="header">
-            <h1>Dashboard</h1>            
+            <h1>Student Admission</h1>            
         </div>
         <div class="content">
-            <div class="image-container">
-                <a href="manage-students.html"><div class="box"><img src="images/registered-users.png"></div></a>
-                <a href="manage-subjects.html"><div class="box"><img src="images/subjects-listed.png"></div></a>
-                <a href="manage-class.html"><div class="box"><img src="images/total-classes-listed.png"></div></a>
-                <a href="results.html"><div class="box"><img src="images/results-declared.png"></div></a>
+            <div class="add-student-container">
+                <h2>Fill the Student Info</h2>
+                <form class="add-student-form">
+                    <h4>Full Name</h4><input type="text"><br>
+                    <h4>Student ID</h4><input type="number"><br>
+                    <h4>School Email</h4><input type="email"><br>
+                    <h4>Gender</h4><input type="radio" id="male" name="gender" value="male">Male <input type="radio" id="female" name="gender" value="female">Female <br>
+                    <h4>Class</h4><select id="class" name="class">
+                        <option value="">Select Class</option>
+                        <option value="class-1">Class 1</option>
+                        <option value="class-2">Class 2</option>
+                    </select><br>
+                    <h4>DOB</h4><input type="date" id="birthday" name="birthday"><br>
+                    <button type="button" class="submit">Submit</button>
+                </form>
             </div>
         </div>
         
