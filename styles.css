@@ -151,7 +151,7 @@ h5 {
 
 /* Style the content area */
 .content, .header {
-    padding: 20px 100px;
+    padding: 10px 100px;
     color: #464545;
     z-index: 1000;
 }
@@ -180,6 +180,11 @@ h5 {
 .image-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.image-container img {
+    width: 300px;
+    height: 177px;
 }
 
 .box {
@@ -249,8 +254,8 @@ h5 {
 .horizontal-line {
     width: 100%;
     height: 1px;
-    background-color: #464545;
-    margin-top: 20px;
+    background-color: #b7b7b7;
+    margin-top: 10px;
     margin-bottom: 15px;
 }
 
@@ -270,10 +275,40 @@ th {
 }
 
 td {
-    background-color: #FFF8EF;
+    background-color: #EAD8C0;
 }
 
-.home {
-    width: 18px;
-    height: 18px;
+.home img {
+    width: 13px;
+    height: 13px;
+    margin-top: -5px;
+    padding-right: 7px;
+}
+
+.header-tabs {
+    display: flex;
+    font-size: 13px;
+    padding-top: -10px;
+    padding-bottom: 5px;
+}
+
+.header-tabs a:hover{
+    text-decoration: underline;
+}
+
+.submit {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1F8A0D; /* Green background color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.submit:hover {
+    background-color: #2A5D2B;
 }
