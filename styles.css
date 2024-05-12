@@ -19,12 +19,20 @@ body {
 }
 
 /* LOGIN PAGE */
+.website-name {
+    font-family: "Roboto Mono", monospace;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 160px;
+    color: #803D3B;
+}
 
 .login-container {
     width: 250px;
-    padding: 10px 20px 20px;
+    padding: 30px 20px;
     background-color: #EAD8C0;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0px 0px 6px #A79D91;
     position: absolute;
     top: 50%;
@@ -49,12 +57,11 @@ body {
 
 
 .login-form button, .big-button {
-      background-color: #D9D9D9;
+      background-color: #f4f1f1;
       color: #561C24;
       font-weight: bold;
       cursor: pointer;
-      border-radius: 27.5px;
-      border-color: black;
+      border-radius: 20px;
       margin-top: 10px;
       text-decoration: none;
 }
@@ -219,7 +226,7 @@ h5 {
 
 /* CREATE CLASS */
 
-.create-class-container {
+.create-class-container, .result-container {
     width: 600px;
     padding: 10px 20px 20px;
     background-color: #EAD8C0;
@@ -242,13 +249,14 @@ h5 {
     background-color: #FFF2E1;
 }
 
-.add-student-container {
+.add-student-container, .result-container {
     display: flex;
     flex-direction: column;
 }
 
 .add-student-form input[type="text"], 
-    .add-student-form input[type="email"] {
+    .add-student-form input[type="email"],
+        .result-form input[type="text"] {
     width: 50%;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -268,7 +276,7 @@ h5 {
     background-color: #FFF2E1;
 }
 
-.add-student-form input[type="date"], .add-student-form select {
+.add-student-form input[type="date"], .add-student-form select, .result-form select {
     width: 25%;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -278,7 +286,7 @@ h5 {
     background-color: #FFF2E1;
 }
 
-h4, .add-student-form input[type="text"]{
+h4, .add-student-form input[type="text"], .result-form input[type="text"]{
     display: inline-block;
     vertical-align: baseline;
 }
@@ -288,6 +296,19 @@ h4, .add-student-form input[type="text"]{
     text-align: right;
     padding-right: 5px;
 }
+
+.result-container h4:first-child {
+    min-width: 100px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.result-container h4:not(:first-child) {
+    min-width: 100px;
+    text-align: right;
+    padding-right: 10px;
+}
+
 
 .add-student-form button {
     margin-left: 115px;
@@ -365,15 +386,42 @@ td {
 }
 
 .log-out {
+    margin-top: 7px;
+}
+
+.log-out a {
     color:white;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: 10px;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .logout-icon {
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
-    margin-left: 67.3rem;
+    width: 25px;
+    height: 25px;
+    margin-left: 1070px;
+    margin-right: 5px;
+    vertical-align: text-bottom;
+}
+
+.declare {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #215888; /* Green background color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0 10px 130px;
+}
+
+.right-arrow {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
 }

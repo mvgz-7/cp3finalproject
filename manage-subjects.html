@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
     </head>
     <body>
         <!-- Upper Bar-->
@@ -16,28 +17,41 @@
                 <img src="images/menu.png" alt="Menu Button">
             </div>
             <div class="title">Student Record Management System</div>
+            <div class="log-out"><a href="welcome.html"><img src="images/logout.png" class="logout-icon">Log Out</a></div>
         </div>
         <!-- Side Bar-->
         <div class="tab-bar" id="tabBar">
             <div class="category">MAIN CATEGORY</div>
             <a href="index.html"><div class="tab-name"><img src="images/dashboard.png" class="icons">Dashboard</div></a>
             <div class="category">APPEARANCE</div>
-            <div class ="tab" onclick="toggleSubtags(this)"><a href="#"><div class="tab-name">
-                <img src="images/classes.png" class="icons">Student Classes</div></a>
+            <div class ="tab" onclick="toggleSubtags(this); changeArrow(this)">
+                <a href="#">
+                    <div class="tab-name">
+                        <img src="images/classes.png" class="icons">Student Classes<img src="arrow.png" class="right-arrow" id="rightArrow">
+                    </div>
+                </a>
                 <div class="subtags">
                     <a href="create-class.html"><div class="tab-name"><img src="images/create.png" class="icons">Create Class</div></a>
                     <a href="manage-class.html"><div class="tab-name"><img src="images/manage.png" class="icons">Manage Class</div></a>
                 </div>
             </div>
-            <div class ="tab" onclick="toggleSubtags(this)"><a href="#"><div class="tab-name">
-                <img src="images/subjects.png" class="icons">Subjects</div></a>
+            <div class ="tab" onclick="toggleSubtags(this); changeArrow(this)">
+                <a href="#">
+                    <div class="tab-name">
+                        <img src="images/subjects.png" class="icons">Subjects<img src="arrow.png" class="right-arrow" id="rightArrow">
+                    </div>
+                </a>
                 <div class="subtags">
                     <a href="create-subject.html"><div class="tab-name"><img src="images/create.png" class="icons">Create Subject</div></a>
-                    <a href="#"><div class="tab-name"><img src="images/manage.png" class="icons">Manage Subjects</div></a>
+                    <a href="manage-subjects.html"><div class="tab-name"><img src="images/manage.png" class="icons">Manage Subjects</div></a>
                 </div>
             </div>
-            <div class ="tab" onclick="toggleSubtags(this)"><a href="#"><div class="tab-name">
-                <img src="images/students.png" class="icons">Students</div></a>
+            <div class ="tab" onclick="toggleSubtags(this); changeArrow(this)">
+                <a href="#">
+                    <div class="tab-name">
+                        <img src="images/students.png" class="icons">Students<img src="arrow.png" class="right-arrow" id="rightArrow">
+                    </div>
+                </a>
                 <div class="subtags">
                     <a href="add-student.html"><div class="tab-name"><img src="images/create.png" class="icons">Add Student</div></a>
                     <a href="manage-students.html"><div class="tab-name"><img src="images/manage.png" class="icons">Manage Students</div></a>
@@ -45,6 +59,7 @@
             </div>
             <a href="results.html"><div class="tab-name"><img src="images/result.png" class="icons">Result</div></a>
         </div>
+
 
         <!-- Main Content-->
         <div class="header">
@@ -85,30 +100,5 @@
                   </table>
             </div>
         </div>
-        
-
-        <!-- JavaScript to toggle tab bar -->
-        <script>
-            function toggleSideMenu() {
-                const tabBar = document.getElementById('tabBar');
-                const content = document.querySelector('.content');
-                const header = document.querySelector('.header');
-                if (tabBar.style.left === '-300px') {
-                    tabBar.style.left = '0';
-                    content.style.marginLeft = '250px';
-                    header.style.marginLeft = '250px';
-                } else {
-                    tabBar.style.left = '-300px';
-                    content.style.marginLeft = '0';
-                    header.style.marginLeft = '0';
-                }
-            }
-
-            function toggleSubtags(tab) {
-                const subtags = tab.querySelector('.subtags');
-                tab.classList.toggle('expanded');
-                subtags.classList.toggle('expanded');
-            }
-        </script>
     </body>
 </html>
