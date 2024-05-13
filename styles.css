@@ -8,14 +8,15 @@ body {
 .red-bar {
     background-color: #803D3B;
     display: flex;
-    z-index: 1000;
+    width: 100%; /* Default width */
+    max-width: none;
+    margin: 0 auto;
 }
 
 .title {
     color: #FFFFFF;
     padding: 10px 2px;
     font-weight: bold;
-    z-index: 1001;
 }
 
 /* LOGIN PAGE */
@@ -109,7 +110,6 @@ h5 {
     padding: 10px 20px;
     margin-top: 2px;
     cursor: pointer;
-    z-index: 1001;
 }
 
 /* INDEX PAGE */
@@ -119,13 +119,11 @@ h5 {
     flex-direction: column;
     position: fixed;
     left: -400px; /* Hide the tab bar by default */
-    top: 40px;
-    bottom: 0;
+    height: 100%;
     width: 250px;
     background-color: #3B3B3B;
     padding: 20px;
     transition: left 0.3s ease;
-    z-index: 999;
 }
 
 .tab-name {
@@ -158,9 +156,29 @@ h5 {
 
 /* Style the content area */
 .content, .header {
-    padding: 10px 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
     color: #464545;
-    z-index: 1000;
+    width: 100%; 
+    max-width: none;
+    margin: 0 auto;
+}
+
+.header {
+    z-index: -1;
+}
+
+.tab-bar {
+    z-index: 1;
+}
+
+.red-bar {
+    z-index: 2;
+}
+
+.title, .menu img{
+    z-index: 3;
 }
 
 /* Responsive styles */
@@ -168,8 +186,9 @@ h5 {
     .tab-bar {
         width: 250px;
     }
-    .content {
-        margin-left: 100px;
+    .red-bar, .header {
+        width: 100%;
+        max-width: none;
     }
 }
 
@@ -180,7 +199,6 @@ h5 {
 .header {
     background-color: #FFF8EF;
     display: flex;
-    margin: 0;
     flex-direction: column;
 }
 
@@ -190,13 +208,17 @@ h5 {
 }
 
 .image-container img {
-    width: 300px;
-    height: 177px;
+    width: 250px;
+    height: 147px;
+}
+
+.image-container img:last-child {
+    padding-right: 0;
 }
 
 .box {
     width: 25%; /* Each box takes 25% of the container width */
-    padding: 10px;
+    padding: 10px 20px 10px 0;
     box-sizing: border-box;
 }
 
@@ -216,7 +238,6 @@ h5 {
     display: none; /* Initially hidden */
     margin-left: 20px; /* Adjust spacing */
     color: white;
-
 }
 
 .tab.expanded .subtags {
@@ -237,7 +258,6 @@ h5 {
     border: #A79D91;
     border-width: 2px;
     border-style: solid;
-    z-index: 998;
 }
 
 .create-class-form input[type="text"]{
@@ -400,7 +420,7 @@ td {
 .logout-icon {
     width: 25px;
     height: 25px;
-    margin-left: 1070px;
+    margin-left: auto;
     margin-right: 5px;
     vertical-align: text-bottom;
 }
