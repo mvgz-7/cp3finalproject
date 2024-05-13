@@ -408,7 +408,7 @@ h4, .add-student-form input[type="text"], .result-form input[type="text"]{
 }
 
 table {
-    width: 50%;
+    width: 75%;
     border-collapse: collapse; /* Combine borders between cells */
     margin-left: 60px;
 }
