@@ -158,11 +158,14 @@ h5 {
 .content, .header {
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 60px;
     color: #464545;
     width: 100%; 
     max-width: none;
     margin: 0 auto;
+}
+
+.header h1 {
+    margin-left: 60px;
 }
 
 .header {
@@ -190,6 +193,45 @@ h5 {
         width: 100%;
         max-width: none;
     }
+    .red-bar {
+        font-size: small;
+    }
+    .header, .view{
+        font-size: smaller;
+    }
+    .create-class-container {
+        font-size: smaller;
+        width: 25%;
+    }
+    .add-student-container {
+        width: 75%;
+    }
+    .add-student-form {
+        margin-left: -20px;
+    }
+    .result-container h4 {
+        margin-left: -10px;
+        margin-right: -17px;
+        font-size: smaller;
+    }
+    .result-container h4:first-child {
+        margin-left: -65px;
+        margin-right: -25px;
+    }
+    .declare {
+        width: 50%;
+        position: absolute;
+        right: 25%;
+        top: 100%;
+    }
+
+    table {
+        width: 25%;
+        max-width: none;
+    }
+    th, td {
+        font-size: x-small;
+    }
 }
 
 .tab-bar a {
@@ -202,18 +244,40 @@ h5 {
     flex-direction: column;
 }
 
+.header a {
+    text-decoration: none;
+    color: #464545;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: #b7b7b7;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.header-tabs {
+    display: flex;
+    font-size: 13px;
+    padding-top: -10px;
+    padding-bottom: 5px;
+    margin-left: 60px;
+}
+
+.header-tabs a:hover{
+    text-decoration: underline;
+}
+
 .image-container {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 60px;
 }
 
 .image-container img {
     width: 250px;
     height: 147px;
-}
-
-.image-container img:last-child {
-    padding-right: 0;
 }
 
 .box {
@@ -248,16 +312,16 @@ h5 {
 /* CREATE CLASS */
 
 .create-class-container, .result-container {
-    width: 600px;
+    width: 50%;
     padding: 10px 20px 20px;
     background-color: #EAD8C0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border: #A79D91;
     border-width: 2px;
     border-style: solid;
+    margin-top: 15px;
+    z-index: -2;
+    margin-left: 60px;
 }
 
 .create-class-form input[type="text"]{
@@ -272,6 +336,7 @@ h5 {
 .add-student-container, .result-container {
     display: flex;
     flex-direction: column;
+    margin-left: 60px;
 }
 
 .add-student-form input[type="text"], 
@@ -338,22 +403,14 @@ h4, .add-student-form input[type="text"], .result-form input[type="text"]{
     margin-bottom: 5px;
 }
 
-.header a {
-    text-decoration: none;
-    color: #464545;
-}
-
-.horizontal-line {
-    width: 100%;
-    height: 1px;
-    background-color: #b7b7b7;
-    margin-top: 10px;
-    margin-bottom: 15px;
+.view {
+    margin-left: 60px;
 }
 
 table {
-    width: 100%;
+    width: 50%;
     border-collapse: collapse; /* Combine borders between cells */
+    margin-left: 60px;
 }
 
 th, td {
@@ -377,16 +434,6 @@ td {
     padding-right: 7px;
 }
 
-.header-tabs {
-    display: flex;
-    font-size: 13px;
-    padding-top: -10px;
-    padding-bottom: 5px;
-}
-
-.header-tabs a:hover{
-    text-decoration: underline;
-}
 
 .submit {
     display: inline-block;
@@ -407,22 +454,14 @@ td {
 
 .log-out {
     margin-top: 7px;
-}
-
-.log-out a {
-    color:white;
     margin-left: auto;
     margin-right: 10px;
-    text-decoration: none;
-    font-size: 18px;
+    vertical-align: text-bottom;
 }
 
 .logout-icon {
     width: 25px;
-    height: 25px;
-    margin-left: auto;
-    margin-right: 5px;
-    vertical-align: text-bottom;
+    height: 25px;  
 }
 
 .declare {
@@ -435,7 +474,8 @@ td {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px 0 10px 130px;
+    margin-left: 130px;
+    margin-top: 10px;
 }
 
 .right-arrow {
