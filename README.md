@@ -1,3 +1,1 @@
 # cp2finalproject
-
-pakyu
